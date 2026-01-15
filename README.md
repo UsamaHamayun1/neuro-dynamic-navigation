@@ -80,7 +80,22 @@ We focused on the optimization metric of **Learning Efficiency**. Our results co
 *(Figure 1: The PAI Agent (Green) achieves high reward stability significantly faster than the Baseline (Orange) and Standard DQN (Red).)*
 
 ---
+## 📈 Detailed Optimization Metrics
 
+We analyzed internal agent metrics to prove that structural growth was the cause of the performance boost.
+1. Exploration Efficiency (Epsilon Decay)
+
+    Remark: The PAI Agent (Green) required significantly less random exploration (starting at ϵ=0.5) to begin learning. The dynamic structure allowed it to generalize spatial features earlier, reducing the "wasteful" exploration phase common in standard RL.
+(results/epsilon.png)
+2. Agent Confidence (Max Q-Values)
+
+    Remark: The "Max Q-Value" represents the agent's confidence in its path planning. The PAI agent exhibits a sharper, more stable rise in Q-values, indicating it "understood" the environment's reward structure much earlier than the Baseline.
+(results/q_value.png)
+3. Convergence Stability (Loss)
+
+    Remark: Despite the dynamic addition of parameters, the PAI agent's loss function (Green line) shows a healthy convergence trend. The smoothed line (Dark Green) demonstrates that the agent is not "oscillating" or forgetting previous knowledge, but effectively stabilizing its policy as it grows.
+(results/pai_loss_plot.png)
+---   
 ## 🎥 Demonstration
 
 **[Insert Link to YouTube Video Here]**
