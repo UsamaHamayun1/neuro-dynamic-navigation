@@ -176,9 +176,9 @@ If you use this work in your research, please cite:
 ```bibtex
 @software{neuro_dynamic_navigation_2024,
   title = {Neuro-Dynamic Navigation: Dendritic PAI for TurtleBot3},
-  author = {Your Name},
+  author = {Usama Hamayun},
   year = {2024},
-  url = {https://github.com/[YOUR_USERNAME]/neuro-dynamic-navigation}
+  url = {https://github.com/[usamahamayun1]/neuro-dynamic-navigation}
 }
 ```
 
