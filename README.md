@@ -5,7 +5,7 @@
 
 ## 📌 Project Overview
 
-Standard Deep Reinforcement Learning (DRL) agents in robotics often suffer from slow adaptation times and "catastrophic forgetting." This project implements a **Dendritic Plasticity Artificial Intelligence (PAI)** agent for the TurtleBot3.
+Standard Deep Reinforcement Learning (DRL) agents in robotics often suffer from slow adaptation times and "catastrophic forgetting." This project implements a **Dendritic (PAI)** agent for the TurtleBot3.
 
 Unlike static neural networks, our agent **dynamically grows new connections (dendrites)** during training to tackle difficult navigation scenarios, mimicking the structural plasticity of biological brains.
 
