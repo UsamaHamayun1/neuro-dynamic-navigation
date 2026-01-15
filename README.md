@@ -95,6 +95,27 @@ We analyzed internal agent metrics to prove that structural growth was the cause
 
     Remark: Despite the dynamic addition of parameters, the PAI agent's loss function (Green line) shows a healthy convergence trend. The smoothed line (Dark Green) demonstrates that the agent is not "oscillating" or forgetting previous knowledge, but effectively stabilizing its policy as it grows.
 ![Loss Plot](results/pai_loss_plot.png)
+
+## 4. Resource Allocation Analysis: Static vs. Dynamic
+
+To verify our hypothesis that "Memory is cheaper than Time," we compared the computational cost of each agent against its learning speed.
+
+| Feature | Standard DQN | Double DQN | **PAI Agent (Ours)** |
+| :--- | :--- | :--- | :--- |
+| **Architecture Type** | Static (Fixed) | Static (Fixed) | **Dynamic (Growing)** |
+| **Initial Parameters** | ~6,080 | ~6,080 | **~6,080** |
+| **Final Parameters** | ~6,080 | ~6,080 | **~12,160** |
+| **Memory Growth** | 0% (Rigid) | 0% (Rigid) | **+100% (Adaptive)** |
+| **Mastery Speed** | Failed (>50 Eps) | 16 Episodes | **7 Episodes** ⚡ |
+| **Optimization Verdict** | Under-parameterized | Stable but Slow | **Fast & Efficient** |
+
+---
+**Discussion:**
+This comparison highlights the fundamental trade-off that gives PAI its advantage:
+
+1.  **The Static Limitation:** Both baseline agents (Standard & Double DQN) are constrained to a fixed budget of parameters. While this makes their memory usage predictable, it prevents them from "spending" extra resources to learn difficult features quickly.
+2.  **The Dynamic Advantage:** The PAI agent detects high-error states during early exploration and responds by allocating new memory resources (dendrites).
+3.  **Result:** By doubling its parameter count (utilizing available RAM), the PAI agent **halved the time required for mastery**. This proves that for modern embedded systems, where RAM is abundant but training time is scarce, dynamic expansion is the superior optimization strategy.
 ---   
 ## 🎥 Demonstration
 
