@@ -62,7 +62,19 @@ We conducted two distinct experimental phases to evaluate the **Perforated AI (P
 
 ### 🟢 Phase 1: Rapid Adaptation (Short-Horizon Test)
 *Hypothesis: Can dynamic growth accelerate early-stage learning?*
-*See `results/q_value`, `results/pai_loss_plot.png` , `results/epsilon.png`*
+
+
+| **Benchmark: PAI vs. Baselines** | **Stability Profile (Double DQN)** |
+| :---: | :---: |
+| ![Benchmark Rewards](results/benchmark_rewards.png) | ![Stability Profile](results/double_dqn_profile.png) |
+| *Figure 1: Long-term Reward Comparison* | *Figure 2: Stability Analysis* |
+
+| **Exploration Strategy** | **Growth Analysis** |
+| :---: | :---: |
+| ![Epsilon Decay](results/benchmark_epsilon.png) | ![PAI Growth](results/pai_deep_analysis.png) |
+| *Figure 3: Epsilon Decay over Time* | *Figure 4: Structural Expansion* |
+
+
 In our initial short-horizon tests, we focused on "Learning Efficiency"—the speed at which an agent can navigate a simple obstacle course without collisions.
 
 | Metric | Baseline (Double DQN) | **Dendritic PAI (Ours)** | **Improvement** |
@@ -82,7 +94,15 @@ We extended the training to **1,000 episodes** to test long-term stability and c
 
 #### 1. Performance vs. Scale
 *See `results/reward-average.png`, `results/reward_score.png` , `results/epsilon2.png`, `results/pai_performance.png`*
+ Performance Visualizations
 
+| Average Reward | Reward Score |
+| :---: | :---: |
+| ![Avg](results/reward-average.png) | ![Score](results/reward_score.png) |
+
+| Epsilon Decay | PAI Performance |
+| :---: | :---: |
+| ![Epsilon](results/epsilon2.png) | ![Performance](results/pai_performance.png) |
 | Metric | **Standard DQN** (Baseline 1) | **Double DQN** (Strong Baseline) | **PAI Agent** (Ours) |
 | :--- | :--- | :--- | :--- |
 | **Architecture** | Large Static (~40k) | Large Static (~40k) | **Small Dynamic (6k $\to$ 41k)** |
