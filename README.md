@@ -102,7 +102,7 @@ We extended the training to **1,000 episodes** to test long-term stability and c
 
 | Epsilon Decay | PAI Performance |
 | :---: | :---: |
-| ![Epsilon](results/epsilon2.png) | ![Performance](results/pal_performance.png) |
+| ![Epsilon](results/epsilon2.png) | ![Performance](results/pai_performance.png) |
 | Metric | **Standard DQN** (Baseline 1) | **Double DQN** (Strong Baseline) | **PAI Agent** (Ours) |
 | :--- | :--- | :--- | :--- |
 | **Architecture** | Large Static (~40k) | Large Static (~40k) | **Small Dynamic (6k $\to$ 41k)** |
