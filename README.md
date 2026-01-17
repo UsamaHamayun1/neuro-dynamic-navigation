@@ -112,13 +112,11 @@ This project demonstrates that **Structural Plasticity** is a powerful optimizat
 
 **Future Direction:**
 The logical next step is to combine the **Structural Efficiency** of PAI with the **Mathematical Stability** of Double DQN. A hybrid "Double PAI" agent would theoretically offer the best of both worlds: low memory usage, rapid adaptation, and stable long-term convergence.
-## 🎥 Demonstration
+### 🎥 Demonstration
 
-**[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)*
+[![Watch the video](https://img.youtube.com/vi/XwziC8jS4sw/0.jpg)](https://youtu.be/XwziC8jS4sw)
 
-*(Above: The PAI Agent navigating the complex obstacle course without collisions after only 7 episodes of training.)*
-
----
+*Click the image above to watch the PAI Agent in action.*
 
 ## 🛠️ Methodology & Architecture
 
