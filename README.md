@@ -62,7 +62,7 @@ We conducted two distinct experimental phases to evaluate the **Perforated AI (P
 
 ### 🟢 Phase 1: Rapid Adaptation (Short-Horizon Test)
 *Hypothesis: Can dynamic growth accelerate early-stage learning?*
-
+*See `results/q_value`, `results/pai_loss_plot.png` , `results/epsilon.png`*
 In our initial short-horizon tests, we focused on "Learning Efficiency"—the speed at which an agent can navigate a simple obstacle course without collisions.
 
 | Metric | Baseline (Double DQN) | **Dendritic PAI (Ours)** | **Improvement** |
@@ -81,7 +81,7 @@ In our initial short-horizon tests, we focused on "Learning Efficiency"—the sp
 We extended the training to **1,000 episodes** to test long-term stability and capacity. The PAI agent (starting with only ~6k parameters) was compared against baselines initialized with full capacity (~40k parameters).
 
 #### 1. Performance vs. Scale
-*See `results/benchmark_rewards.png`*
+*See `results/reward-average.png`, `results/reward_score.png` , `results/epsilon2.png`, `results/pai_performance.png`*
 
 | Metric | **Standard DQN** (Baseline 1) | **Double DQN** (Strong Baseline) | **PAI Agent** (Ours) |
 | :--- | :--- | :--- | :--- |
@@ -95,7 +95,7 @@ We extended the training to **1,000 episodes** to test long-term stability and c
 * **The Cost of Growth:** PAI took longer to solve the environment in the long run (Episode 58 vs Episode 12 for baselines). This delay represents the **"Plasticity Phase"**—the necessary time for the agent to physically grow dendrites and reach the required complexity to solve the task.
 
 #### 2. Stability Profile: Architecture vs. Algorithm
-*See `results/double_dqn_profile.png`*
+
 
 * **Double DQN** achieved superior long-term stability due to its **Algorithmic** advantage (Double Q-learning reduces overestimation bias).
 * **PAI** exhibited volatility similar to Standard DQN because it shares the same underlying **Mathematical** rule.
