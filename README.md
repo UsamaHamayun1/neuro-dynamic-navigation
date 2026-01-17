@@ -98,7 +98,7 @@ We extended the training to **1,000 episodes** to test long-term stability and c
 
 | Average Reward | Reward Score |
 | :---: | :---: |
-| ![Avg](results/reward-average.png) | ![Score](results/reward_score.png) |
+| ![Avg](results/reward_average.png) | ![Score](results/reward-score.png) |
 
 | Epsilon Decay | PAI Performance |
 | :---: | :---: |
