@@ -153,26 +153,6 @@ Instead of initializing a full dense network (which wastes memory), we start wit
 *(This graph illustrates the step-wise addition of parameters (Blue line) correlating with the increase in Reward (Orange line).)*
 ---
 
-## 📂 Repository Structure
-
-This repository contains the standalone agent code. It requires a standard ROS2/TurtleBot3 simulation environment.
-
-```text
-neuro-dynamic-navigation/
-│
-├── README.md               # Project documentation
-├── models/                 # Pre-trained model weights
-│   ├── pai_agent.pth       # Our Optimized Dendritic Agent
-│   └── baseline_agent.pth  # Standard Double DQN (for comparison)
-│
-├── src/                    # Source Code
-│   ├── dqn_agent_pai.py    # (CORE) The PAI Agent logic
-│   ├── dqn_agent_double.py # The Baseline Agent logic
-│   └── dqn_environment.py  # The RL Environment wrapper
-│
-└── results/                # Data artifacts
-    └── comparison_plot.png # Training performance graph
-```
 
 ---
 
