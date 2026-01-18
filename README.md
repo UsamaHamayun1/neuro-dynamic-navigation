@@ -149,7 +149,7 @@ Instead of initializing a full dense network (which wastes memory), we start wit
 * **Result:** The agent autonomously grew from **6,213** $\to$ **41,135** parameters by the time it mastered the map.
 
 ### 2. Architecture Visualized
-*See `[PAI](results/pai.png)`*
+*See `![PAI](results/pai.png)`*
 *(This graph illustrates the step-wise addition of parameters (Blue line) correlating with the increase in Reward (Orange line).)*
 ---
 
