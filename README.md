@@ -138,14 +138,19 @@ The logical next step is to combine the **Structural Efficiency** of PAI with th
 
 *Click the image above to watch the PAI Agent in action.*
 
-## 🛠️ Methodology & Architecture
+## 🛠️ Methodology: Neuro-Dynamic Plasticity
 
-The agent utilizes a hybrid **Main Module + Dendrite Module** topology:
+Our agent differs from standard RL by using a **Dynamic Sparse Architecture** (based on the PAI algorithm).
 
-1. **Main Module:** A standard fully connected backbone that handles general navigation.
-2. **Dendrite Module:** A masking layer that dynamically activates or "grows" weights based on the difficulty of the current state input.
-3. **Sparse Training:** While the model grows, it uses a sparsity mask to ensure that only relevant connections are updated, maintaining computational efficiency during the forward pass.
+### 1. The Growth Mechanism
+Instead of initializing a full dense network (which wastes memory), we start with a **minimal seed (~6,200 parameters)**.
+* **Initialization:** The network begins with 85% of its potential connections masked (inactive).
+* **Dynamic Growth:** During the "Plasticity Phase," the agent monitors the loss function. High-error states trigger a **dendritic growth step**, unmasking new connections to increase capacity.
+* **Result:** The agent autonomously grew from **6,213** $\to$ **41,135** parameters by the time it mastered the map.
 
+### 2. Architecture Visualized
+*See `[PAI](results/pai.png)`*
+*(This graph illustrates the step-wise addition of parameters (Blue line) correlating with the increase in Reward (Orange line).)*
 ---
 
 ## 📂 Repository Structure
