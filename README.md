@@ -184,8 +184,7 @@ If you use this work in your research, please cite:
 ## 🙏 Acknowledgments
 
 - ROS 2 and TurtleBot3 communities
-- NVIDIA for GPU support
-- DeepSeek AI for technical insights
+- Perforated AI 
 
 ---
 
